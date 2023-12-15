@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <p onclick="playGame('rock')">rock</p>
+  <script>
+    let playerScore = 0;
+    let computerScore = 0; 
+    let playerChoice = `rock`;
+    let gameOver = false
+    let gameResult = ""
+    function playGame(playerChoice){
+        if (gameOver){
+            return
+        }
+    const choices = [`rock` , `paper` , `scissors`]
+    const computerChoice = choices[Math.floor(Math.random() * 3 )];
+
+    let result;
+
+        if(playerChoice === computerChoice) {
+            result = `its a tie`;
+        } else if (
+            (playerChoice === 'rock' && computerChoice === 'scissors') ||
+            (playerChoice === 'paper' && computerChoice === 'rock') ||
+            (playerChoice === 'scissors' && computerChoice === 'paper')
+        ) {
+            result = `You Win!`;
+        } else {
+            result = `Computer Win!`;
+        }
+
+        if (result === `You Win!`){
+            playerScore ++;
+        } else if (result === `Computer Win!`){
+            computerScore ++;
+        }
+        
+        if (playerScore === 5 || computerScore === 5){
+            gameOver = true;
+
+        if (playerScore === 5 ){
+            gameResult = ` YOU WON THE GAME!`
+        } else if (computerScore === 5){
+            gameResult = `COMPUTER WON THE GAME!`
+        }
+
+        }
+
+    console.log(playerChoice)
+    console.log(computerChoice)
+    console.log(`P1 Score: ${playerScore} P2 Score: ${computerScore}`)
+    console.log(result)
+    console.log(gameResult);
+    }
+  </script>
+</body>
+</html>

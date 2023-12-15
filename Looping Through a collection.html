@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+
+
+</head>
+<body>
+  <script>
+const cats = ["Pete","Tom", "Biggles", "Jasmine"];
+
+let myFavoriteCats = `My cats names are `
+
+for (i = 0; i < cats.length;i ++){
+  if(i === cats.length - 2){
+    myFavoriteCats += `${cats[i]} `
+  } else if (i === cats.length - 1){
+    myFavoriteCats += `And ${cats[i]}.`
+  } else {
+    myFavoriteCats += `${cats[i]}, `
+  }
+} 
+
+
+
+console.log(myFavoriteCats);
+
+
+
+  </script>
+</body>
+</html>

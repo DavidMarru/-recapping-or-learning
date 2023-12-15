@@ -1,0 +1,2 @@
+const randomNumber = math.random();
+

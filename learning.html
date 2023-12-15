@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Cardio 💪</title>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+<body>
+  <script>
+    function book(name,pages,by,read) {
+      this.name = name;
+      this.pages = pages;
+      this.by = by;
+      this.read = function(){
+        if (read === `yes`){
+          return `book completed.`;
+        } else if (read === `no`){
+          return `book not completed`;
+        }
+      }; 
+      this.log = function() {
+        console.log(`the book's called ${this.name} its ${this.pages} pages by,${this.by} ${this.read()}`)
+      };
+    }
+
+  const book1 = new book(`Harry`,`260`,`david`,`yes`);
+
+  book1.log()
+
+  </script>
+</body>
+</html>
